@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Transfer</title>
+    <script type="module" src="app.js" defer></script>
+</head>
+<body>
+    <h1>Token Transfer</h1>
+    <p>このDappsではダミートークン"TET"を交換できます。取引はテストブロックチェーン"Sepolia"に記録されます ლ(╹◡╹ლ)</p>
+
+    <div id="isNotInstalled" style="display: none;">
+        <p>まずは<a href="https://metamask.io/" target="_blank">MetaMaskをインストール</a>しましょう🦊</p>
+    </div>
+
+    <div id="isNotConnected" style="display: none;">
+        <button id="connectButton">🦊メタマスクを接続</button>
+    </div>
+    
+    <div id="isConnected" style="display: none;">
+        <div>
+            <div>
+                <h6>🏠あなたのアカウント</h6>
+                <p><span id="signerAccount""></span></p>
+            </div>
+            <div id="changeAnimation">
+                <h6>🎗️あなたのトークン</h6>
+                <p><span id="balance"></span> TET</p>
+            </div>
+        </div>
+        
+        <div>
+            <div>
+                <label>📨誰に送る？</label>
+                <input id="receiverAccount" placeholder="0x........">
+            </div>
+            <div>
+                <label>🪙いくら送る？</label>
+                <input id="valueToSend" placeholder="1234567890">
+            </div>
+            <button id="sendButton" type="button">
+                <span id="buttonText">TETを送る</span>
+                <span id="spinner" style="display: none;">🔄</span>
+            </button>
+        </div>
+    </div>
+        
+    <footer>
+        © 20XX TOKEN TRANSFER ʕ•ᴥ•ʔ
+    </footer>
+</body>
+</html>
